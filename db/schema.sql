@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS gameboxd_db;
+
+CREATE DATABASE gameboxd_db;
