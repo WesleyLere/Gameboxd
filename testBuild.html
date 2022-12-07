@@ -15,7 +15,7 @@
 <body class ="min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-200 via-gray-400 to-gray-600">
 <header>
 
-    <div class="container flex flex-wrap items-center justify-center mx-auto">
+    <div class="container flex flex-wrap items-center justify-center mx-auto ">
         <h1 class="text-7xl p-5 m-5 text-slate-700 " id="heading">GameBoxd</h1>
     </div>
 
@@ -26,7 +26,7 @@
               <span class="self-center text-xl font-semibold text-white text-3xl">GameBoxd</span>
           </a>
           
-          <div class="hidden w-full md:block md:w-auto flex items-stretch">
+          <div class="hidden w-full md:block md:w-auto flex align-content: space-between;">
             <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 ">
               <li>
                 <a href="#" class="text-2xl block py-2 pl-3 pr-4 text-slate-100 rounded hover:bg-gray-100 hover:drop-shadow-lg md:hover:bg-transparent md:border-0 md:hover:text-blue-700  md:p-0" aria-current="page">Home</a>
@@ -51,7 +51,7 @@
       </nav>
     </header>
 
-    <main class="flex items-stretch">
+    <main class="flex justify-center">
         <div id="" class="text-3xl text-white p-10 text-center">
             <ul id="" class="border-4 rounded max-w-2xl">
                 <li id="million" class="text-3xl text-white p-10 mt-5" >Make an account and join<br>The other Million Users!*</li>
@@ -60,7 +60,7 @@
             </ul>
         </div>
 
-        <div class="m-10 w-96 p-5">
+        <div class="m-10 w-96 p-5 flex align-content: space-between;">
             <div class="">
                 <form class="bg-slate-700 shadow-md rounded-2xl px-8 pt-6 pb-8 mb-4">
                   <div class="mb-4">
@@ -85,10 +85,22 @@
         </div>
     </main>
 
-    <section id="gameList" class="">
-    
+    <section id="gameList" class="flex justify-center">
+      <div id="" class="text-3xl text-white p-10 text-center flex items-center">
+        <ul id="" class="border-4 rounded">
+           <h1 class="m-10 text-slate-700">Popular Games</h1>
+           <div class="flex items-center p-8 justify-between">
+           <li id="game1" class="border-4 rounded max-w-2xl flex items-center"> test</li>
+           <li id="game1" class="border-4 rounded max-w-2xl flex items-center"> test</li>
+           <li id="game1" class="border-4 rounded max-w-2xl flex items-center"> test</li>
+          </div>
+        </ul>
+       
+
+    </div>
     </section>
-    <p>* only four users right now, but it has potential.</p>
+
+    <p class="flex justify-center text-white">* only four users right now, but it has potential.</p>
 
       
  <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
