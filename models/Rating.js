@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Ratings extends module{}
+class Rating extends module{}
 
-Ratings.init({
+Rating.init({
     id: {
         type: DataTypes.INTEGER,
         allowNull: false,
@@ -19,5 +19,14 @@ Ratings.init({
         type: DataTypes.STRING,
         allowNull: false,
       }
-})
+},
 
+{
+  sequelize,
+  underscored: true,
+  modelName: 'rating',
+}
+
+)
+
+module.exports = Rating;
