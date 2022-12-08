@@ -26,7 +26,7 @@ UserGame.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'usergame',
+    modelName: 'user_game',
   }
 );
 
