@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Rating extends module{}
+class Rating extends Model{}
 
 Rating.init({
     id: {
@@ -10,15 +10,29 @@ Rating.init({
         primaryKey: true,
         autoIncrement: true,
       },
-      comment: {
-        type: DataTypes.DATE,
-        allowNull: false,
-        defaultValue: DataTypes.NOW,
+    comment: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    },
+    rating: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
       },
-      rating: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      }
+    },
+    game_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'game',
+        key: 'id',
+      },
+    },
 },
 
 {
