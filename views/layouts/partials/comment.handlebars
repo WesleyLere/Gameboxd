@@ -40,20 +40,26 @@
 
     <!--CODE BELOW IS GAME INFO AND COMMENT FEED PAGE-->
     <section>
+      {{#each users as |user| }}
+
       <div id="gameCard" class="text-3xl text-white m-10 p-10 text-center shadow-inner shadow-xl">
         <div id="imageFrame" class="">
           <img id="imageOgGame" src="" >
           <div id="commentbox" class="">
-            <h2>User: {{}}</h2>
+            <h2>User: {{user.name}}</h2>
             <div id="commentFrame" class="">
             <p id="actualComment" class=""></p>
             </div>
             <button id="postButton" class="">Post</button>
           </div>
+          
+          {{/each}}
 
+          
+<!--CODE BELOW IS SHOWING COMMENTS ON GAME LEFT BY OTHER USERS-->
           <div id="PreviousComments" class="">
     <div id="commentbox" class="">
-            <h2>User: {{}}</h2>
+            <h2>User: {{user.name}}</h2>
             <div id="commentFrame" class="">
             <p id="actualComment" class=""></p>
             </div>
