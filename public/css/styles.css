@@ -34,3 +34,12 @@ font-family: industry-inc-base, sans-serif;
 font-weight: 400;
 font-style: normal;    
 }
+
+img {
+    width: 320px;
+    height: 480px;
+}
+
+::selection {
+    background: #ffbb00; /* WebKit/Blink Browsers */
+  }
