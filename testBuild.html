@@ -53,7 +53,7 @@
 
     <main class="flex justify-center">
         <div id="" class="text-3xl text-white m-10 p-10 text-center shadow-inner shadow-xl">
-            <ul id="" class="border-4 rounded max-w-2xl ">
+            <ul id="" class="border-4 rounded max-w-2xl">
                 <li id="million" class="text-3xl text-white p-10 mt-5" >Make an account and join<br>The other Million Users!*</li>
                 <li id="million" class="text-3xl text-white p-10">Find other players that play <br>the games the you like.</li>
                 <li id="million" class="text-3xl text-white p-10"> Review and add your favorite <br>games to your profile</li>
@@ -103,14 +103,22 @@
       <h1 class="text-7xl p-5 m-5 text-slate-700 container flex flex-wrap items-center justify-center mx-auto">
           Games I love
       </h1>
-      <div class="flex items-center p-8 justify-between m-2 p-2">
-          <h2 id="nameofGame" class="">
-              <span> </span>
+      <div class="flex items-center p-8 justify-between m-2 p-2 container flex-wrap mx-auto">
+          <h2 id="nameofGame" class=" text-3xl p-5 m-5 text-slate-700 container flex flex-wrap items-center justify-center mx-auto">
+              <span>Breath of the Wild </span>
           </h2>
-          <img id="gameArt" src="./images/The_Legend_of_Zelda_Breath_of_the_Wild.jpg" alt="" class="">
-          <div>
-              <p id="gameInfo"></p>
+          <div class="container flex flex-wrap items-center justify-center mx-auto">
+            <div class="container flex flex-wrap items-center justify-center mx-auto relative overflow-hidden bg-no-repeat bg-cover max-w-xs">
+              <img src="./images/The_Legend_of_Zelda_Breath_of_the_Wild.jpg" alt="" class="max-w-xs hover:scale-105 transition duration-200 ease-in-out cursor-pointer">
+            </div>
+           
+            <div class="container flex flex-wrap items-center justify-center mx-auto">
+                <p id="million" class="text-1xl text-white m-10 p-10 text-center border-4 rounded max-w-2xl">
+                  After a 100-year slumber, Link wakes up alone in a world he no longer remembers. Now the legendary hero must explore a vast and dangerous land and regain his memories before Hyrule is lost forever. Armed only with what he can scavenge, Link sets out to find answers and the resources needed to survive.
+                </p>
+            </div>
           </div>
+
       </div>
   
       <form id="reviewRateform" class="flex flex-wrap items-center justify-center mx-auto">
@@ -118,15 +126,15 @@
           <h3 id="reviewTitle">
               <span id="titleHereBackEnd"> </span>
           </h3>
-        <div id="reivewBox" class="">
+        <div id="reivewBox" class="flex flex-wrap items-center justify-center mx-auto">
           <label class="text-2xl block py-2 pl-3 pr-4 text-slate-100 rounded hover:bg-gray-100 hover:drop-shadow-lg md:hover:bg-transparent md:border-0 md:p-0">Add your Review.</label>
           <textarea id="actualReview" class="">
   
           </textarea>
         </div class="">
           <div class="">
-              <p class="text-2xl block py-2 pl-3 pr-4 text-slate-100 rounded hover:bg-gray-100 hover:drop-shadow-lg md:hover:bg-transparent md:border-0 md:p-0">Rating:</p>
-              <div id="stars" class="text-2xl block py-2 pl-3 pr-4 text-slate-100 rounded hover:bg-gray-100 hover:drop-shadow-lg md:hover:bg-transparent md:border-0 md:p-0">
+              <p class="text-2xl block py-2 pl-3 pr-4 text-slate-100 rounded md:border-0 md:p-0">Rating:</p>
+              <div id="stars" class="text-2xl block py-2 pl-3 pr-4 text-slate-100 rounded  md:border-0 md:p-0">
                   <input class="" type="radio" id="star5" name="rate" value="5">
                   <label class="" for="star5" title="text">5 stars</label>
                   <input class="" type="radio" id="star4" name="rate" value="4">
@@ -139,13 +147,22 @@
                   <label class="" for="star1" title="text">1 stars</label>
               </div>
           </div>
-          <button id="" class="text-2xl block py-2 pl-3 pr-4 text-slate-100 rounded hover:bg-gray-100 hover:drop-shadow-lg md:hover:bg-transparent md:border-0 md:p-0">
+          <div class="flex items-center justify-center m-5 p-5 container flex-wrap mx-auto">
+            <button id="" class="flex items-center justify-center container bg-cyan-700 hover:bg-cyan-600 rounded-full text-white font-bold py-4 px-6 mt-8 rounded focus:outline-none focus:shadow-outline">
               Add to profile
           </button>
+          <div class="flex items-center m-2 p-2">
+            <button id="" class="bg-violet-700 hover:bg-violet-600 rounded-full text-white font-bold py-4 px-6 mt-8 rounded focus:outline-none focus:shadow-outline">
+              Submit
+          </button>
+          </div>
+          </div>
+        
+          </div>
       </div>
-      <button id="" class="text-2xl block py-2 pl-3 pr-4 text-slate-100 rounded hover:bg-gray-100 hover:drop-shadow-lg md:hover:bg-transparent md:border-0 md:p-0">
-          Submit
-      </button>
+      
+   
+      
       </form>
   
   </div>
