@@ -5,7 +5,7 @@ async function loginFormatHandler(event) {
     const password = document.querySelector('#password-login').value.trim();
 
     if (email && password) { 
-        const response = await fetch('/controllers/api/userRoutes', {
+        const response = await fetch('/api/user', {
             method: 'post',
             body: JSON.stingify({
                 email,
@@ -15,7 +15,7 @@ async function loginFormatHandler(event) {
         });
 
         if (response.ok) {
-            document.location.replace('/home');
+            document.location.replace('/user');
         } else {
             alert(response.statusText);
         }
