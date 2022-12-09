@@ -62,21 +62,27 @@
         
             <div class="m-10 p-10">
               <h1 class="text-5xl p-5 m-5 text-slate-700">Sign up Here!</h1>
-                <form class="bg-slate-700 shadow-md rounded-2xl px-8 pt-6 pb-8 mb-4">
+                <form class="bg-slate-700 shadow-lg rounded-2xl px-8 pt-6 pb-8 mb-4">
                   <div class="mb-4">
                     <label class="block text-slate-200 text-sm font-bold mb-2" for="username">
-                      Username/Email
+                      Username
                     </label>
-                    <input class="shadow-lg border-2 rounded-full w-full py-2 px-3 text-gray-700 focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username/Email">
+                    <input class="shadow-lg border-2 rounded-full w-full py-2 px-3 text-gray-700 border-green-500 focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username">
                   </div>
-                  <div class="mb-8">
+                  <div class="mb-4">
+                    <label class="block text-slate-200 text-sm font-bold mb-2" for="username">
+                      Email
+                    </label>
+                    <input class="shadow-lg border-2 rounded-full w-full py-2 px-3 text-gray-700 border-yellow-500 focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Email">
+                  </div>
+                  <div class="mb-4">
                     <label class="block text-slate-200 text-sm font-bold mb-2" for="password">
                       Password
                     </label>
-                    <input class="shadow rounded-full appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline focus:shadow-outline" id="password" type="password" placeholder="Super Secret Password">
+                    <input class="shadow-lg border-2 rounded-full w-full py-2 px-3 text-gray-700 border-red-500 focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="Super Secret Password">
                   </div>
                   <div class="flex items-center justify-center">
-                    <button class="bg-blue-500 hover:bg-blue-700 rounded-full text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                    <button class="bg-blue-500 hover:bg-blue-700 rounded-full text-white font-bold py-4 px-6 mt-8 rounded focus:outline-none focus:shadow-outline" type="button">
                       Sign Up
                     </button>
                   </div>
@@ -85,24 +91,9 @@
         </div>
     </main>
 
-    <section id="gameList" class="flex justify-center">
-      <div id="" class="text-3xl text-white p-10 text-center flex items-center">
-        <ul id="" class="border-4 rounded">
-           <h1 class="m-10 text-slate-700">Popular Games</h1>
-           <div class="flex items-center p-8 justify-between">
-           <li id="game1" class="border-4 rounded max-w-2xl flex items-center"> test</li>
-           <li id="game1" class="border-4 rounded max-w-2xl flex items-center"> test</li>
-           <li id="game1" class="border-4 rounded max-w-2xl flex items-center"> test</li>
-          </div>
-        </ul>
-       
-
-    </div>
-    </section>
-
     <p class="flex justify-center text-white">* only four users right now, but it has potential.</p>
 
-      
+<script src="./public/js/public.js"></script>
  <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
 </body>
 </html>
