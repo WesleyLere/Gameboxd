@@ -2,7 +2,7 @@
 
 <div>
 <div class='w-full max-w-lg px-10 py-8 mx-auto'>
-    <form class="bg-slate-700 shadow-md rounded-2xl px-8 pt-6 pb-8 mb-4">
+    <form class="bg-slate-700 shadow-md rounded-2xl px-8 pt-6 pb-8 mb-4 login-form">
         <div class="mb-4">
           <h2 class="flex justify-center text-white p-5"> Welcome Back fellow gamer!</h2>
             <label class="block text-slate-200 text-sm font-bold mb-2" for="username">
@@ -35,38 +35,43 @@
     <div>
       <p class="text-3xl text-white p-10 mt-5 flex justify-center items-center">Not a member? <br>Sign up below!</p>
     </div>
-    <form class="bg-slate-700 shadow-lg rounded-2xl px-8 pt-6 pb-8 mb-4">
+    <form class="bg-slate-700 shadow-lg rounded-2xl px-8 pt-6 pb-8 mb-4 signUp-form">
     <div class="mb-4">
-      <label class="block text-slate-200 text-sm font-bold mb-2" for="username">
+      <label class="block text-slate-200 text-sm font-bold mb-2" for="signupUsername">
         Username
       </label>
       <input
         class="shadow-lg border-2 rounded-full w-full py-2 px-3 text-gray-700 border-green-500 focus:outline-none focus:shadow-outline"
-        id="username" type="text" placeholder="Username">
+        id="signupUsername" type="text" placeholder="Username">
     </div>
     <div class="mb-4">
-      <label class="block text-slate-200 text-sm font-bold mb-2" for="username">
+      <label class="block text-slate-200 text-sm font-bold mb-2" for="signupEmail">
         Email
       </label>
       <input
         class="shadow-lg border-2 rounded-full w-full py-2 px-3 text-gray-700 border-yellow-500 focus:outline-none focus:shadow-outline"
-        id="username" type="text" placeholder="Email">
+        id="signupEmail" type="text" placeholder="Email">
     </div>
     <div class="mb-4">
-      <label class="block text-slate-200 text-sm font-bold mb-2" for="password">
+      <label class="block text-slate-200 text-sm font-bold mb-2" for="signupPassword">
         Password
       </label>
       <input
         class="shadow-lg border-2 rounded-full w-full py-2 px-3 text-gray-700 border-red-500 focus:outline-none focus:shadow-outline"
-        id="password" type="password" placeholder="Super Secret Password">
+        id="signupPassword" type="password" placeholder="Super Secret Password">
     </div>
-    <div class="flex items-center justify-center">
+    <a href="/">
+      <div class="flex items-center justify-center">
       <button
         class="bg-blue-500 hover:bg-blue-700 rounded-full text-white font-bold py-4 px-6 mt-8 rounded focus:outline-none focus:shadow-outline"
         type="button">
         Sign Up
       </button>
     </div>
+    </a>
   </form>
 </div>
 </div>
+
+<script src="/js/login.js"></script>
+<script src="/js/signup.js"></script>
