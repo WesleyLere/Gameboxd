@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Game } = require('../models');
+const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   // Send the rendered Handlebars.js template back as the response
@@ -18,7 +19,7 @@ router.get('/', async (req, res) => {
 router.get('/login', async (req,res) => {
     res.render('login')
 })
-router.get('/profile', async (req,res) => {
+router.get('/profile', withAuth, async (req,res) => {
   res.render('profile')
 })
 router.get('/gamereview', async (req,res) => {
