@@ -16,7 +16,7 @@ Rating.init({
       defaultValue: DataTypes.NOW,
     },
     rating: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     user_id: {
