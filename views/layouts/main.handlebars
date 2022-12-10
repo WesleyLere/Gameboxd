@@ -39,9 +39,11 @@
                <li>
                 <a href="/profile" class="text-2xl block py-2 pl-3 pr-4 text-slate-100 rounded hover:bg-gray-100 hover:drop-shadow-lg md:hover:bg-transparent md:border-0 md:hover:text-blue-700  md:p-0" aria-current="page">Profile</a>
               </li>
+               {{#unless logged_in}}
               <li>
                 <a href="/login" class="text-2xl block py-2 pl-3 pr-4 text-slate-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Login</a>
               </li>
+              {{/unless}}
               {{#if logged_in}}
               <li>
                 <a href="#" class="text-2xl block py-2 pl-3 pr-4 text-slate-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" id="logout">Logout</a>
