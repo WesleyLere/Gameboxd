@@ -3,7 +3,16 @@ const { Game } = require('../models');
 
 router.get('/', async (req, res) => {
   // Send the rendered Handlebars.js template back as the response
-  res.render('homepage');
+  try {
+    const gameData = await Game.findAll({
+      limit: 5
+    })
+    const games = gameData.map(game => game.get({plain: true}));
+
+  res.render('homepage', games);
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 router.get('/login', async (req,res) => {
