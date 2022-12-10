@@ -39,6 +39,11 @@
               <li>
                 <a href="/login" class="text-2xl block py-2 pl-3 pr-4 text-slate-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Login</a>
               </li>
+              {{#if logged_in}}
+              <li>
+                <a href="#" class="text-2xl block py-2 pl-3 pr-4 text-slate-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" id="logout">Logout</a>
+              </li>
+              {{/if}}
               <li>
                 <form class="order-first mb-10 md:mb-0 md:order-last md:pr-8" action="">
                     <input class="w-72 py-1 pl-3 pr-10 rounded-full focus:outline-0" type="text" placeholder="Search.."
@@ -56,8 +61,9 @@
 {{{ body }}}
     
 
-
+ {{#if logged_in}}
 <script src="/js/logout.js"></script>
+{{/if}}
  <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
 </body>
 </html>
