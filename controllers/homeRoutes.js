@@ -10,7 +10,10 @@ router.get('/', async (req, res) => {
     })
     const games = gameData.map(game => game.get({plain: true}));
 
-  res.render('homepage', games);
+  res.render('homepage', {
+    ...games,
+    logged_in: req.session.logged_in 
+  });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -20,7 +23,9 @@ router.get('/login', async (req,res) => {
     res.render('login')
 })
 router.get('/profile', withAuth, async (req,res) => {
-  res.render('profile')
+  res.render('profile', {
+    logged_in: true
+  })
 })
 router.get('/gamereview', async (req,res) => {
   res.render('gamereview')

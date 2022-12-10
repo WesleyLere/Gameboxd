@@ -25,45 +25,38 @@
     </div>
 
     <nav class="px-2 sm:px-4 py-2.5 rounded bg-teal-500 flex items-stretch">
-      <div class="container flex flex-wrap items-center justify-between mx-auto">
-        <a href="" class="flex items-center">
-          <!-- <img src="" class="h-6 mr-3 sm:h-9" alt="logo" /> -->
-          <span class="self-center text-xl font-semibold text-white text-3xl">GameBoxd</span>
-        </a>
-
-        <div class="hidden w-full md:block md:w-auto flex align-content: space-between;">
-          <ul
-            class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 ">
-            <li>
-              <a href="/"
-                class="text-2xl block py-2 pl-3 pr-4 text-slate-100 rounded hover:bg-gray-100 hover:drop-shadow-lg md:hover:bg-transparent md:border-0 md:hover:text-blue-700  md:p-0"
-                aria-current="page">Home</a>
-            </li>
-            <li>
-              <a href="/profile"
-                class="text-2xl block py-2 pl-3 pr-4 text-slate-100 rounded hover:bg-gray-100 hover:drop-shadow-lg md:hover:bg-transparent md:border-0 md:hover:text-blue-700  md:p-0"
-                aria-current="page">Profile</a>
-            </li>
-            <li>
+        <div class="container flex flex-wrap items-center justify-between mx-auto">
+          <a href="" class="flex items-center">
+              <!-- <img src="" class="h-6 mr-3 sm:h-9" alt="logo" /> --> 
+              <span class="self-center text-xl font-semibold text-white text-3xl">GameBoxd</span>
+          </a>
+          
+          <div class="hidden w-full md:block md:w-auto flex align-content: space-between;">
+            <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 ">
+              <li>
+                <a href="/" class="text-2xl block py-2 pl-3 pr-4 text-slate-100 rounded hover:bg-gray-100 hover:drop-shadow-lg md:hover:bg-transparent md:border-0 md:hover:text-blue-700  md:p-0" aria-current="page">Home</a>
+              </li>
+               <li>
+                <a href="/profile" class="text-2xl block py-2 pl-3 pr-4 text-slate-100 rounded hover:bg-gray-100 hover:drop-shadow-lg md:hover:bg-transparent md:border-0 md:hover:text-blue-700  md:p-0" aria-current="page">Profile</a>
+              </li>
+              <li>
+                <a href="/login" class="text-2xl block py-2 pl-3 pr-4 text-slate-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Login</a>
+              </li>
               {{#if logged_in}}
-              <a href="" id="logout" class= "text-2xl block py-2 pl-3 pr-4 text-slate-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">
-             logout
+              <li>
+                <a href="#" class="text-2xl block py-2 pl-3 pr-4 text-slate-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" id="logout">Logout</a>
+              </li>
               {{/if}}
-              </a>
-
-              <a href="/login"
-                class="text-2xl block py-2 pl-3 pr-4 text-slate-100 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Login</a>
-               
-            </li>
-            <li>
-              <form class="order-first mb-10 md:mb-0 md:order-last md:pr-8" action="">
-                <input class="w-72 py-1 pl-3 pr-10 rounded-full focus:outline-0" type="text" placeholder="Search.."
-                  name="search">
-                <button class="-ml-8 border-6 bg-trasparent" type="submit"><i
-                    class="fa fa-search text-gray-400"></i></button>
-              </form>
-            </li>
-          </ul>
+              <li>
+                <form class="order-first mb-10 md:mb-0 md:order-last md:pr-8" action="">
+                    <input class="w-72 py-1 pl-3 pr-10 rounded-full focus:outline-0" type="text" placeholder="Search.."
+                        name="search">
+                    <button class="-ml-8 border-6 bg-trasparent" type="submit"><i
+                            class="fa fa-search text-gray-400"></i></button>
+                </form>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
@@ -72,8 +65,9 @@
 {{{ body }}}
     
 
-
+ {{#if logged_in}}
 <script src="/js/logout.js"></script>
+{{/if}}
  <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
 </body>
 
