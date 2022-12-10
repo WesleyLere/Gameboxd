@@ -25,7 +25,7 @@ router.post('/login', async (req, res) => {
         { username: req.body.emailUsername }
       ]}
     });
-
+console.log(userData)
     if (!userData) {
       res
         .status(400)
