@@ -8,13 +8,20 @@ function displayData(){
 
 displayData() 
 
+searchButton.addEventListener("click", function(){
 
-if(localStorage.getItem('searchResult')){
-const itemValue = localStorage.getItem('title');
-const outputElement = document.querySelector('#title');
-outputElement.textContent = itemValue;
-}
+    gameSearched=gameSearchedInput.value
+ 
+    gameSearchURL = 'https://steam2.p.rapidapi.com/search/' + game + '/page/1', options
+ 
+    console.log(gameSearched)
+ 
+    setGame()
+ })
+
+
+ 
 // first get data from local storage 
 // loop through data and target element inside search page.handlebars 
 // clear out key searchResult from local storage 
-// 
+//  

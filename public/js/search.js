@@ -27,20 +27,3 @@ document.getElementById("search")
         gameSearch();
     }
 });
-
-
-// fetch('https://steam2.p.rapidapi.com/search/')
-//   .then(response => response.json()) // Parse the response as JSON
-//   .then(data => {
-//     // Extract the data you want to display from the response
-//     const items = data.items;
-
-//     // Use the appropriate HTML elements to render the data on the page
-//     const ul = document.createElement('ul');
-//     items.forEach(item => {
-//       const li = document.createElement('li');
-//       li.textContent = item.name;
-//       ul.appendChild(li);
-//     });
-//     document.body.appendChild(ul);
-//   });
