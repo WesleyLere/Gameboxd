@@ -50,12 +50,10 @@
               </li>
               {{/if}}
               <li>
-                <form class="order-first mb-10 md:mb-0 md:order-last md:pr-8" action="">
-                    <input class="w-72 py-1 pl-3 pr-10 rounded-full focus:outline-0" type="text" placeholder="Search.."
+                <div class="order-first mb-10 md:mb-0 md:order-last md:pr-8"  action="">
+                    <input class="w-72 py-1 pl-3 pr-10 rounded-full focus:outline-0" id="search" type="text" placeholder="Search.."
                         name="search">
-                    <button class="-ml-8 border-6 bg-trasparent" type="submit"><i
-                            class="fa fa-search text-gray-400"></i></button>
-                </form>
+                </div>
               </li>
             </ul>
           </div>
@@ -70,6 +68,7 @@
  {{#if logged_in}}
 <script src="/js/logout.js"></script>
 {{/if}}
+<script src="/js/search.js"></script>
  <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
 </body>
 

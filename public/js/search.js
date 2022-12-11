@@ -1,4 +1,4 @@
-function gameSearch(event) {
+function gameSearch() {
     const game = document.querySelector('#search').value.trim()
     const options = {
         method: 'GET',
@@ -13,11 +13,10 @@ function gameSearch(event) {
         .catch(err => console.error(err));
    
 }
-
+// document.getElementById("searchBtn").addEventListener("click", gameSearch)
 document.getElementById("search")
-    .addEventListener("keyup", function(event) {
-    event.preventDefault();
-    if (event.key === 13) {
-        document.getElementById("button").click();
+    .addEventListener("keyup", (e) => {
+    if (e.key === "Enter") {
+        gameSearch();
     }
 });
