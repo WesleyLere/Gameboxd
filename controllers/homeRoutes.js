@@ -20,11 +20,15 @@ router.get('/login', async (req,res) => {
     res.render('login')
 })
 router.get('/profile', withAuth, async (req,res) => {
-  res.render('profile')
+  res.render('profile', {
+    logged_in: true
+  })
 })
 
 router.get('/searchResult', withAuth, async(req, res) => {
-  res.render('searchPage')
+  res.render('searchPage', {
+    logged_in: true
+  })
 })
 
 router.get('/gamereview', async (req,res) => {
