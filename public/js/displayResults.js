@@ -20,7 +20,14 @@ searchButton.addEventListener("click", function(){
  })
 
 
+
+ let storageLocal = JSON.parse(localStorage.getItem("game")) || [];
+for (let i = 0; i < storageLocal.length; i++) {
+  savedText.append(storageLocal[i].date + ': ' + storageLocal[i].description + '<br>');
+}
+
  
+
 // first get data from local storage 
 // loop through data and target element inside search page.handlebars 
 // clear out key searchResult from local storage 
