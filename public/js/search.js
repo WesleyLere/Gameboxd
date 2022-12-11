@@ -9,7 +9,14 @@ function gameSearch() {
     };
      fetch('https://steam2.p.rapidapi.com/search/' + game + '/page/1', options)
         .then(response => response.json())
-        .then(response => console.log(response))
+        .then(response => {
+            console.log(response)
+        
+            let slicedData= response.slice(0,4)
+
+            localStorage.setItem('searchResult', JSON.stringify(slicedData))
+            document.location.replace('/searchResult');
+        })
         .catch(err => console.error(err));
    
 }
