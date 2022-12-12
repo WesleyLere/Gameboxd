@@ -3,6 +3,6 @@ const userRoutes = require('./userRoutes');
 const ratingRoutes = require('./ratingRoutes')
 
 router.use('/users', userRoutes);
-router.user('/ratings', ratingRoutes)
+router.use('/ratings', ratingRoutes)
 
 module.exports = router;
