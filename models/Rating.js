@@ -11,7 +11,7 @@ Rating.init({
         autoIncrement: true,
       },
     comment: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
