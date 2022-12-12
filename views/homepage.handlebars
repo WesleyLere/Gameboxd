@@ -89,7 +89,7 @@
             <div class="container flex flex-wrap items-center justify-center mx-auto">
                 <div
                     class="container flex flex-wrap items-center justify-center mx-auto relative overflow-hidden bg-no-repeat bg-cover max-w-xs">
-                    <a><img src="../images/ModernWarfareII_Keyart_MWII.webp"
+                    <a href="/gamereview/1938090"><img src="../images/ModernWarfareII_Keyart_MWII.webp" id="CodImg"
                             alt="COD MW II Cover art"
                             class="max-w-xs hover:scale-105 transition duration-200 ease-in-out cursor-pointer CodImg"></a>
                 </div>
@@ -113,7 +113,7 @@ Modern Warfare® II launches with a globe-trotting single-player campaign, immer
                     <div
                         class="container flex flex-wrap items-center justify-center mx-auto relative overflow-hidden bg-no-repeat bg-cover max-w-xs">
                         <a><img src="../images/elden ring.jpg" alt="Elden ring cover art"
-                                class="max-w-xs hover:scale-105 transition duration-200 ease-in-out cursor-pointer EldenRingImg"></a>
+                                class="max-w-xs hover:scale-105 transition duration-200 ease-in-out cursor-pointer" id=" EldenRingImg"></a>
                     </div>
 
                     <div class="container flex flex-wrap items-center justify-center mx-auto">
@@ -136,7 +136,7 @@ Modern Warfare® II launches with a globe-trotting single-player campaign, immer
                 <div class="container flex flex-wrap items-center justify-center mx-auto">
                     <div
                         class="container flex flex-wrap items-center justify-center mx-auto relative overflow-hidden bg-no-repeat bg-cover max-w-xs CsgoImg">
-                        <a src=""><img src="../images/CSGOcoverMarch2020.jpg" alt="" class="max-w-xs hover:scale-105 transition duration-200 ease-in-out cursor-pointer"></a>
+                        <a src=""><img src="../images/CSGOcoverMarch2020.jpg" alt="" class="max-w-xs hover:scale-105 transition duration-200 ease-in-out cursor-pointer" id="CsgoImg"></a>
                     </div>
 
                     <div class="container flex flex-wrap items-center justify-center mx-auto">
@@ -158,9 +158,9 @@ Modern Warfare® II launches with a globe-trotting single-player campaign, immer
     <footer class="flex justify-center text-white">
         <h2> MADE BY GAMERS. </h2>
     </footer>
+    {{#unless logged_in}}
     <script src="/js/signup.js"></script>
-    {{!--
-    <script src="./public/js/public.js"></script> --}}
+   {{/unless}}
     <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
 </body>
 
