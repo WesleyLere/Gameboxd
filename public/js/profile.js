@@ -1,7 +1,7 @@
 const { UserGame } = require("../../models");
 
 function getprofilegames() {
-    const game = UserGame
+    const gameId = UserGame
     const options = {
         method: 'GET',
         headers: {
