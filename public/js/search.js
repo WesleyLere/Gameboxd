@@ -12,7 +12,7 @@ function gameSearch() {
         .then(response => {
             console.log(response)
         
-            let slicedData= response.slice(0,4)
+            let slicedData= response.slice(0,100)
 
             localStorage.setItem('searchResult', JSON.stringify(slicedData))
             document.location.replace('/searchResult');
