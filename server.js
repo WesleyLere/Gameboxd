@@ -17,7 +17,7 @@ const hbs = exphbs.create();
 const sess = {
   secret: 'Super secret secret',
   cookie: {
-    maxAge: 300000,
+    maxAge: 3000000, // change back to 300000
     httpOnly: true,
     secure: false,
     sameSite: 'strict',
@@ -42,6 +42,7 @@ app.use(express.static(path.join(__dirname+'/public')));
 
 app.use(routes);
 
-sequelize.sync({ force: false }).then(() => {
+sequelize.sync({alter: true}).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
+// change back to force: false
