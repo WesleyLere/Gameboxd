@@ -56,8 +56,9 @@ router.get('/searchResult', withAuth, (req, res) => {
   })
 })
 
-router.get('/gamereview', (req,res) => {
+router.get('/game/:id', (req,res) => {
   res.render('gamereview')
 })
+
 
 module.exports = router;
