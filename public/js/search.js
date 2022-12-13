@@ -1,12 +1,12 @@
 function gameSearch() {
     const game = document.querySelector('#search').value.trim()
     const options = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Key': process.env.apiKey,
-            'X-RapidAPI-Host': 'steam2.p.rapidapi.com'
-        }
-    };
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '39fcf7cf62mshb1cac5ccb20e1eep1cf83ejsnd5589ee92c81',
+		'X-RapidAPI-Host': 'steam2.p.rapidapi.com'
+	}
+};
      fetch('https://steam2.p.rapidapi.com/search/' + game + '/page/1', options)
         .then(response => response.json())
         .then(response => {
