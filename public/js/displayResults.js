@@ -1,6 +1,4 @@
 //const search = require("../../controllers/homeRoutes");
-var searchTitle = localStorage.getItem('title');
-var searchImg = localStorage.getItem('imgurl');
 let targetElement =document.getElementById('searchResults')
 
 function displayData(){
