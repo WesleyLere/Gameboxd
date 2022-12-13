@@ -5,7 +5,7 @@ function getprofilegames() {
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '39fcf7cf62mshb1cac5ccb20e1eep1cf83ejsnd5589ee92c81',
+            'X-RapidAPI-Key': process.env.apiKey,
             'X-RapidAPI-Host': 'steam2.p.rapidapi.com'
         }
     };
