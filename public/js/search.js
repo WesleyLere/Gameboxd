@@ -18,7 +18,6 @@ function gameSearch() {
             document.location.replace('/searchResult');
         })
         .catch(err => console.error(err));
-   
 }
 // document.getElementById("searchBtn").addEventListener("click", gameSearch)
 document.getElementById("search")

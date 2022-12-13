@@ -1,17 +1,12 @@
 const router = require('express').Router();
-const { Game, User } = require('../models');
+const { Game, User, Rating } = require('../models');
 const withAuth = require('../utils/auth');
+const sequelize = require('../config/connection');
 
+// Home Page
 router.get('/', async (req, res) => {
-// Send the rendered Handlebars.js template back as the response
   try {
-    const gameData = await Game.findAll({
-      limit: 5
-    })
-    const games = gameData.map(game => game.get({plain: true}));
-
     res.render('homepage', {
-      ...games,
       logged_in: req.session.logged_in 
     });
     } catch (err) {
@@ -21,6 +16,10 @@ router.get('/', async (req, res) => {
 // Render login page
 router.get('/login', async (req,res) => {
   try {
+    if (req.session.logged_in) {
+      res.redirect('/profile');
+      return;
+    }
     res.render('login')
   } catch (err) {
     res.status(500).json(err);
@@ -30,13 +29,8 @@ router.get('/login', async (req,res) => {
 router.get('/profile', withAuth, async (req,res) => {
   try {
     const userData = await User.findByPk(req.session.user_id, {
+      include: [ Game ],
       attributes: { exclude: ['password'] },
-      include: [
-        {
-          model: Game,
-          attributes: ['name', 'description']
-        }
-      ]
     })
 
     const user = userData.get({ plain: true});
@@ -50,15 +44,55 @@ router.get('/profile', withAuth, async (req,res) => {
   }
 })
 
-router.get('/searchResult', withAuth, (req, res) => {
+router.get('/searchResult', (req, res) => {
   res.render('searchPage', {
     logged_in: req.session.logged_in 
   })
 })
 
-router.get('/game/:id', (req,res) => {
-  res.render('gamereview')
+router.get('/game/:id', withAuth, async (req,res) => {
+  try {
+    // find a game that appId = :id
+    const gameData = await Game.findOne({
+      where: {
+        appId: req.params.id
+      },
+      // JOIN with the rating table
+      include: [{
+        model: Rating,
+        attributes: ['comment', 'rating'],
+        // JOIN with the user table
+        include: {
+          model: User,
+          attributes: ['username']
+        }
+      }],
+      // average the rating of all users
+      attributes: {
+        include: [
+          [
+            sequelize.literal(
+              '(SELECT AVG(rating) FROM rating WHERE rating.game_id = game.id)'
+            ),
+            'avgScore',
+          ],
+        ],
+      },
+    })
+    if(!gameData) {
+      res.render('gamereview', {
+        logged_in: true,
+      })
+    } else {
+      const game = gameData.get({plain: true});
+      res.render('gamereview', {
+        ...game,
+        logged_in: true,
+      })
+    }
+  } catch (err) {
+    res.status(500).json(err);
+  }
 })
-
 
 module.exports = router;
