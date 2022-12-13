@@ -2,7 +2,6 @@
 var game_id = location.pathname.split('/')[2];
 getApiCall()
 
-console.log(game_id)
 function getApiCall() {
   const options = {
     method: 'GET',
@@ -15,7 +14,6 @@ function getApiCall() {
 fetch('https://steam2.p.rapidapi.com/appDetail/' + game_id, options)
 .then(response => response.json())
 .then(response => {
-    console.log(response)
     localStorage.setItem('gameReview', JSON.stringify(response))
     displayData()
 })
@@ -53,23 +51,22 @@ async function  ratingFormHandler(event) {
     let rating = document.querySelector('input[name="rate"]:checked').value
     rating = parseInt(rating)
     game_id = parseInt(game_id)
-    console.log(comment, rating)
 
     if (comment && rating) {
-        console.log(comment,rating)
       const response = await fetch('/api/ratings', {
         method: 'POST',
         body: JSON.stringify({ comment, rating, game_id}),
         headers: { 'Content-Type': 'application/json' },
       });
-  //console.log
+
       if (response.ok) {
-        console.log(response)
+        document.location.reload();
       } else {
         alert('Failed to post review');
       }
+    } else {
+      console.error("Please fill out both Review and Rating")
     }
 }
-
 
 document.querySelector('#submitButton').addEventListener('click', ratingFormHandler);

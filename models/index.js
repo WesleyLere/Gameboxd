@@ -15,6 +15,7 @@ Game.belongsToMany(User, {
 
 User.hasMany(Rating, {
   foreignKey: 'user_id',
+  onDelete: "cascade"
 })
 
 Rating.belongsTo(User, {
@@ -23,6 +24,7 @@ Rating.belongsTo(User, {
 
 Game.hasMany(Rating, {
   foreignKey: 'game_id',
+  onDelete: "cascade"
 })
 
 Rating.belongsTo(Game, {
