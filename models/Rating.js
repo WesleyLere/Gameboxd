@@ -13,7 +13,6 @@ Rating.init({
     comment: {
       type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: DataTypes.NOW,
     },
     rating: {
       type: DataTypes.INTEGER,
@@ -37,6 +36,7 @@ Rating.init({
 
 {
   sequelize,
+  freezeTableName: true,
   underscored: true,
   modelName: 'rating',
 }

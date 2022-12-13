@@ -11,16 +11,14 @@ Game.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
-      type: DataTypes.STRING,
+    appId: {
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
-    description: {
-      type: DataTypes.STRING(1000),
-    },
-    },
+  },
   {
     sequelize,
+    timestamps: false,
     freezeTableName: true,
     underscored: true,
     modelName: 'game',
