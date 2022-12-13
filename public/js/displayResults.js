@@ -15,7 +15,6 @@ function displayData(){
     }
     targetElement.innerHTML = searchGames
     console.log(data);
-
 }
 
 displayData() 
