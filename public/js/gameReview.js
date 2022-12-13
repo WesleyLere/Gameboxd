@@ -1,5 +1,5 @@
 
-var game_id = location.pathname.split('/');
+var game_id = location.pathname.split('/')[2];
 getApiCall()
 
 console.log(game_id)
@@ -12,7 +12,7 @@ const options = {
 	}
 };
 
-fetch('https://steam2.p.rapidapi.com/appDetail/' + game_id[2], options)
+fetch('https://steam2.p.rapidapi.com/appDetail/' + game_id, options)
 .then(response => response.json())
 .then(response => {
     console.log(response)
@@ -32,7 +32,6 @@ function displayData(){
         <h2 class="text-2xl p-5 mt-5 text-slate-700 container flex items-center justify-center">${data.title}
         </h2>
         <img src="${data.imgUrl}" alt=""  class=" mx-auto m-5 flex-wrap flex row justify-center items-center hover:shadow-md hover:shadow-amber-400"/>
-        </a>
         <p>
         ${data.description}
         </p>
@@ -50,16 +49,20 @@ function addToProfile(event) {
 async function  ratingFormHandler(event) {
     event.preventDefault();
   
-    const commentBox = document.querySelector('#actualReview').value.trim();
-    const star = document.querySelector('#stars').value.trim();
-  
-    if (commentBox && star) {
-      const response = await fetch('/api/ratingRoutes/', {
+    const comment = document.querySelector('#actualReview').value.trim();
+    let rating = document.querySelector('input[name="rate"]:checked').value
+    rating = parseInt(rating)
+    game_id = parseInt(game_id)
+    console.log(comment, rating)
+
+    if (comment && rating) {
+        console.log(comment,rating)
+      const response = await fetch('/api/ratings', {
         method: 'POST',
-        body: JSON.stringify({ star, commentBox }),
+        body: JSON.stringify({ comment, rating, game_id}),
         headers: { 'Content-Type': 'application/json' },
       });
-  console.log
+  //console.log
       if (response.ok) {
         console.log(response)
       } else {
@@ -67,3 +70,6 @@ async function  ratingFormHandler(event) {
       }
     }
 }
+
+
+document.querySelector('#submitButton').addEventListener('click', ratingFormHandler);
