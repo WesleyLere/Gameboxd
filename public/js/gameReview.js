@@ -26,8 +26,8 @@ function displayData(){
     let targetElement = document.getElementById('gamecard')
     let data = JSON.parse(localStorage.getItem('gameReview'))
     let gameReview = ''
-        gameReview += `<div class="justify-center items-center flex grid-col-2">
-        <h2 class=" basis-1/4 m-10 text-7xl text-amber-500 container flex items-center justify-center">${data.title}
+        gameReview += `<div class="justify-center items-center flex flex-wrap grid-col-2">
+        <h2 class=" basis-1/4 m-10 text-7xl text-amber-500 container flex flex-wrap items-center justify-center">${data.title}
         </h2>
         <img src="${data.imgUrl}" alt="" class="mx-auto mt-10 border-2 border-gray-100 w-auto flex items-center justify-center mx-auto"/>
         </a>
