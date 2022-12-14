@@ -29,7 +29,7 @@ function displayData(){
         gameReview += `<div class="justify-center items-center flex flex-wrap grid-col-2">
         <h2 class=" basis-1/4 m-10 text-7xl text-amber-500 container flex flex-wrap items-center justify-center">${data.title}
         </h2>
-        <img src="${data.imgUrl}" alt="" class="mx-auto mt-10 border-2 border-gray-100 w-auto flex items-center justify-center mx-auto"/>
+        <img src="${data.imgUrl}" alt="" class="shadow-inner mx-auto mt-10 border-2 border-gray-100 w-auto flex items-center justify-center mx-auto"/>
         </a>
         <p class="shadow-inner border-2 border-gray-100 w-96 flex flex-wrap text-2xl text-center m-10 p-10 items-center justify-center">
         ${data.description}

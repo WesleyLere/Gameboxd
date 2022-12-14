@@ -5,13 +5,13 @@
     <section id="gamecard"></section>
     <div id="reivewBox" class="flex flex-wrap items-center justify-center mx-auto">
 
-      <div class="flex-col-2 border-4 border-gray-100 m-5">
+      <div class="shadow-inner flex-col-2 border-4 border-gray-100 m-5">
         <h2 class="text-4xl text-white m-5">User Reviews</h2>
         {{!-- <p class="m-5">This is a test</p> --}}
-        <div class="border-2 border-amber-500 m-5">
+        <div class="shadow-inner border-2 border-amber-500 m-5">
           <div class="flex flex-row space-x-32 m-6">
             <h2 class="text-xl m-1 p-1">{{username}}Jeff2</h2><!--Username that left comment/review will go here-->
-            <p class="text-md text-white">5 stars</p><!--USER RATING WILL GO HERE-->
+            <p id="userRating" class="text-md text-white">5 stars</p><!--USER RATING WILL GO HERE-->
           </div>
 
           <p id="gameReview" class="m-2 p-1">This game was amazing!<!--Game Review will go here--></p>
@@ -23,7 +23,7 @@
       {{/each}} --}}
     </div>
   </div>
-  <div class="m-10 border-4 border-gray-100 flex flex-wrap items-center justify-center mx-auto">
+  <div class="shadow-inner m-10 border-4 border-gray-100 flex flex-wrap items-center justify-center mx-auto">
     <label
       class=" m-5 text-2xl block py-2 pl-3 pr-4 text-slate-100 rounded hover:bg-gray-100 hover:drop-shadow-lg md:hover:bg-transparent md:border-0 md:p-0">Add
       your Review.</label>
