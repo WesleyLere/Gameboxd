@@ -14,7 +14,6 @@ function displayData(){
       </div>`
     }
     targetElement.innerHTML = searchGames
-    console.log(data);
 }
 
 displayData() 
