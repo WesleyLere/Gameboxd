@@ -44,6 +44,7 @@ function displayData(){
    
     
     targetElement.innerHTML=gameReview
+    document.querySelector('#profileButton').addEventListener('click', addToProfile);
 }
 
 async function addToProfile(event) {
@@ -90,4 +91,4 @@ async function  ratingFormHandler(event) {
 }
 
 document.querySelector('#submitButton').addEventListener('click', ratingFormHandler);
-document.querySelector('#profileButton').addEventListener('click', addToProfile);
+
