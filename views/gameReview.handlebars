@@ -1,63 +1,64 @@
 <!--CODE BELOW WILL BE FOR PAGE SHOWING GAME REVIEW-->
 
 <form id="reviewRateform" class="flex flex-wrap items-center justify-center mx-auto">
-  <div id="" class="">
+  <div id="" class="m-5 border-4 border-gray-100">
     <section id="gamecard"></section>
     <div id="reivewBox" class="flex flex-wrap items-center justify-center mx-auto">
 
-      <div class="flex-col">
-        <h2 class="text-4xl text-white">User Reviews</h2>
+      <div class="flex-col-2 border-4 border-gray-100 m-5">
+        <h2 class="text-4xl text-white m-5">User Reviews</h2>
         {{!-- <p class="m-5">This is a test</p> --}}
-        <div class="border-4 border-gray-100 m-5">
-          <h2 class="text-xl m-1 p-1">{{username}}Jeff2</h2><!--Username that left comment/review will go here-->
-          <p id="gameReview" class="m-1 p-1">This game was amazing!<!--Game Review will go here--></p>
-        </div>
+        <div class="border-2 border-amber-500 m-5">
+          <div class="flex flex-row space-x-32 m-6">
+            <h2 class="text-xl m-1 p-1">{{username}}Jeff2</h2><!--Username that left comment/review will go here-->
+            <p class="text-md text-white">5 stars</p><!--USER RATING WILL GO HERE-->
+          </div>
 
-        <div class="border-4 border-gray-100 m-5">
-          <h2 class="text-xl m-1 p-1">{{username}}Jeff2</h2><!--Username that left comment/review will go here-->
-
-          <p id="gameReview" class="m-1 p-1">This game was amazing!<!--Game Review will go here--></p>
+          <p id="gameReview" class="m-2 p-1">This game was amazing!<!--Game Review will go here--></p>
+          <p></p>
         </div>
-        {{!-- {{#each users as |user| }}
-        {{> userReview}}
-        {{/each}} --}}
+      </div>
+      {{!-- {{#each users as |user| }}
+      {{> userReview}}
+      {{/each}} --}}
+    </div>
+  </div>
+  <div class="m-10 border-4 border-gray-100 flex flex-wrap items-center justify-center mx-auto">
+    <label
+      class=" m-5 text-2xl block py-2 pl-3 pr-4 text-slate-100 rounded hover:bg-gray-100 hover:drop-shadow-lg md:hover:bg-transparent md:border-0 md:p-0">Add
+      your Review.</label>
+    <textarea id="actualReview" class="border-4 border-gray-100 m-5 text-xl text-cyan-500 text-bgdold">
+          </textarea>
+    <div class="">
+      <p class="text-2xl block py-2 pl-3 pr-4 text-slate-100 rounded md:border-0 md:p-0">Rating:</p>
+
+      <div id="stars"
+        class="flex flex-wrap items-center justify-center mx-auto text-2xl block m-5 py-2 pl-3 pr-4 text-slate-100 rounded  md:border-0 md:p-0">
+        <input class="m-1" type="radio" id="star5" name="rate" value="5">
+        <label class="m-1" for="star5" title="text">5 stars</label>
+        <input class="m-1" type="radio" id="star4" name="rate" value="4">
+        <label class="m-1" for="star4" title="text">4 stars</label>
+        <input class="m-1" type="radio" id="star3" name="rate" value="3">
+        <label class="m-1" for="star3" title="text">3 stars</label>
+        <input class="m-1" type="radio" id="star2" name="rate" value="2">
+        <label class="m-1" for="star2" title="text">2 stars</label>
+        <input class="m-1" type="radio" id="star1" name="rate" value="1">
+        <label class="m-1" for="star1" title="text">1 star</label>
       </div>
     </div>
-    <div class="flex flex-wrap items-center justify-center mx-auto">
-      <label
-        class=" m-5 text-2xl block py-2 pl-3 pr-4 text-slate-100 rounded hover:bg-gray-100 hover:drop-shadow-lg md:hover:bg-transparent md:border-0 md:p-0">Add
-        your Review.</label>
-      <textarea id="actualReview" class="">
-          </textarea>
-          <div class="">
-              <p class="text-2xl block py-2 pl-3 pr-4 text-slate-100 rounded md:border-0 md:p-0">Rating:</p>
-              <div id="stars" class="text-2xl block py-2 pl-3 pr-4 text-slate-100 rounded  md:border-0 md:p-0">
-                  <input class="" type="radio" id="star5" name="rate" value="5">
-                  <label class="" for="star5" title="text">5 stars</label>
-                  <input class="" type="radio" id="star4" name="rate" value="4">
-                  <label class="" for="star4" title="text">4 stars</label>
-                  <input class="" type="radio" id="star3" name="rate" value="3">
-                  <label class="" for="star3" title="text">3 stars</label>
-                  <input class="" type="radio" id="star2" name="rate" value="2">
-                  <label class="" for="star2" title="text">2 stars</label>
-                  <input class="" type="radio" id="star1" name="rate" value="1">
-                  <label class="" for="star1" title="text">1 star</label>
-              </div>
-          </div>
-          <div class="flex items-center justify-center m-5 p-5 container flex-wrap mx-auto">
-            <button id="" class="flex items-center justify-center container bg-cyan-700 hover:bg-cyan-600 rounded-full text-white font-bold py-4 px-6 mt-8 rounded focus:outline-none focus:shadow-outline">
-              Add to profile
-          </button>
-          <div class="flex items-center m-2 p-2">
-            <button id="submitButton" class="bg-violet-700 hover:bg-violet-600 rounded-full text-white font-bold py-4 px-6 mt-8 rounded focus:outline-none focus:shadow-outline">
-              Submit
-          </button>
-          </div>
-          </div>
-        
-          </div>
+    <div class="flex items-center justify-center m-5 flex-wrap mx-auto">
+
+      <div class="flex items-center justify-center m-5 flex-wrap mx-auto p-2">
+        <button id="submitButton"
+          class="transform transition duration-200 hover:scale-110 hover:shadow-md flex bg-violet-700 hover:bg-indigo-500 rounded-full text-white font-bold py-4 px-6 mt-8 focus:outline-none focus:shadow-outline">
+          Submit
+        </button>
       </div>
-      </form>
+
+
+    </div>
   </div>
+</form>
+</div>
 
 <script src="/js/gameReview.js"></script>
