@@ -40,7 +40,14 @@ function displayData(){
 }
 
 function addToProfile(event) {
-    
+    event.preventDefault();
+
+    const fetchURL = `/api/games/${game_id}`
+    const options = {
+      method: 'POST',
+      body: JSON.stringify({ comment, rating, game_id}),
+      headers: { 'Content-Type': 'application/json' },
+    }
 }
 
 
@@ -70,3 +77,4 @@ async function  ratingFormHandler(event) {
 }
 
 document.querySelector('#submitButton').addEventListener('click', ratingFormHandler);
+document.querySelector('#profileButton').addEventListener('click', addToProfile);
