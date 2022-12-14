@@ -80,12 +80,12 @@ router.get('/game/:id', withAuth, async (req,res) => {
       },
     })
     if(!gameData) {
-      res.render('gamereview', {
+      res.render('gameReview', {
         logged_in: true,
       })
     } else {
       const game = gameData.get({plain: true});
-      res.render('gamereview', {
+      res.render('gameReview', {
         ...game,
         logged_in: true,
       })
