@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { Op } = require("sequelize");
-const { User } = require('../../models');
+const { User, Game } = require('../../models');
 
 router.post('/', async (req, res) => {
   try {
@@ -63,5 +63,15 @@ router.post('/logout', (req, res) => {
     res.status(404).end();
   }
 });
+
+router.get('/', async (req, res) => {
+  const userData = await User.findByPk(req.session.user_id, {
+    include: [ Game ],
+    attributes: { exclude: ['password'] },
+  })
+
+  const user = userData.get({ plain: true});
+  res.json(user);
+})
 
 module.exports = router;

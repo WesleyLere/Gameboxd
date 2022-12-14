@@ -28,15 +28,7 @@ router.get('/login', async (req,res) => {
 // Send the user's data and games to profile
 router.get('/profile', withAuth, async (req,res) => {
   try {
-    const userData = await User.findByPk(req.session.user_id, {
-      include: [ Game ],
-      attributes: { exclude: ['password'] },
-    })
-
-    const user = userData.get({ plain: true});
-
     res.render('profile', {
-      ...user,
       logged_in: true
     })
   } catch (err) {
