@@ -39,15 +39,21 @@ function displayData(){
     targetElement.innerHTML=gameReview
 }
 
-function addToProfile(event) {
-    event.preventDefault();
+async function addToProfile(event) {
+  event.preventDefault();
 
-    const fetchURL = `/api/games/${game_id}`
-    const options = {
+  if (game_id) {
+    const response = await fetch('/api/games/'+game_id, {
       method: 'POST',
-      body: JSON.stringify({ comment, rating, game_id}),
       headers: { 'Content-Type': 'application/json' },
+    });
+
+    if (response.ok) {
+      document.location.reload();
+    } else {
+      alert('Failed to post review');
     }
+  } 
 }
 
 
