@@ -1,9 +1,9 @@
 <div class="shadow-inner border-2 border-amber-500 m-5">
     <div class="flex flex-row space-x-32 m-6">
-        <h2 class="text-xl m-1 p-1">{{username}}Jeff2</h2><!--Username that left comment/review will go here-->
-        <p id="userRating" class="text-md text-white">5 stars</p><!--USER RATING WILL GO HERE-->
+        <h2 class="text-xl m-1 p-1">{{user.username}}</h2><!--Username that left comment/review will go here-->
+        <p id="userRating" class="text-md text-white">{{rating}}</p><!--USER RATING WILL GO HERE-->
     </div>
 
-    <p id="gameReview" class="m-2 p-1">This game was amazing!<!--Game Review will go here--></p>
+    <p id="gameReview" class="m-2 p-1">{{comment}}<!--Game Review will go here--></p>
     <p></p>
 </div>
