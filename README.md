@@ -24,15 +24,15 @@ Home Page
 
 Search Result
 
-<img width=450, height=350 src="" alt='Search Result screenshot'>
+<img width=450, height=400 src="https://user-images.githubusercontent.com/82792300/207756235-2714b890-8367-4aec-8839-1c6ccac67087.png" alt='Search Result screenshot'>
 
 Game Details Page
 
-<img width=450, height=350 src="" alt='Game Details screenshot'>
+<img width=450, height=500 src="https://user-images.githubusercontent.com/82792300/207756222-05a3f201-dc08-40c8-9ca8-f494fe3bca68.png" alt='Game Details screenshot'>
 
 Profile
 
-<img width=450, height=350 src="" alt='Profile screenshot'>
+<img width=500, height=350 src="https://user-images.githubusercontent.com/82792300/207756219-b01dab8e-4768-41e4-bfac-2d889ff05863.png" alt='Profile screenshot'>
 
 ## Installation 🔧
 
@@ -66,6 +66,7 @@ npm run start
 * mysql2
 * nodemon
 * sequelize
+* nodemailer
 
 ## Technologies 💻
 
