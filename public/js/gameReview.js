@@ -2,6 +2,13 @@
 var game_id = location.pathname.split('/')[2];
 getApiCall()
 
+function steamScore(game) {
+  const pTag = document.getElementById(steamScore);
+  const score = game.allReviews.ratingValue;
+  const text = `Steam Score: ${score}/10`;
+  pTag.innerText = text;
+}
+
 function getApiCall() {
   const options = {
     method: 'GET',
@@ -16,6 +23,7 @@ fetch('https://steam2.p.rapidapi.com/appDetail/' + game_id, options)
 .then(response => {
     localStorage.setItem('gameReview', JSON.stringify(response))
     displayData()
+    steamScore(response);
 })
 .catch(err => console.log(err));
 
