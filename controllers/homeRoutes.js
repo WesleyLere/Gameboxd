@@ -64,7 +64,7 @@ router.get('/game/:id', withAuth, async (req,res) => {
         include: [
           [
             sequelize.literal(
-              '(SELECT ROUND(AVG(rating)) FROM rating WHERE rating.game_id = game.id)'
+              '(SELECT ROUND(AVG(rating), 1) FROM rating WHERE rating.game_id = game.id)'
             ),
             'avgScore',
           ],

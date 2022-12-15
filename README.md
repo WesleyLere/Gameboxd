@@ -6,7 +6,7 @@
 
 ## Description 📃
 
-An web app which user can create their own account, search for games from STEAM through a [STEAM API](https://rapidapi.com/psimavel/api/steam2). Then, inside the game details page, user can view the game's thumbnail, description, other users' reviews and rating fo the game. User can also give their own rating and review on the same page and if they like the game, it can be bookmark to their profile.
+An web app which user can create their own account (receive a welcome email send through Nodemailer), search for games from STEAM through a [STEAM API](https://rapidapi.com/psimavel/api/steam2). Then, inside the game details page, user can view the game's thumbnail, description, other users' reviews and rating fo the game. User can also give their own rating and review on the same page and if they like the game, it can be bookmark to their profile.
 
 Check out our GameBoxd App [here](https://gamebox.herokuapp.com/) 👈
 
