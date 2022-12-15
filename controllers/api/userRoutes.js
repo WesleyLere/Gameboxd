@@ -1,15 +1,20 @@
 const router = require('express').Router();
 const { Op } = require("sequelize");
 const { User, Game } = require('../../models');
+const { welcome } = require('../../utils/nodemailer')
 
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
+    // Send automatic email via Nodemailer
+    if(userData) {
+      welcome(userData.email, userData.username)
+    }
 
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
-
+    
       res.status(200).json(userData);
     });
   } catch (err) {
